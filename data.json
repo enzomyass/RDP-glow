@@ -1,0 +1,111 @@
+{
+    "day": 1,
+    "start_date": "2026-04-02",
+    "last_reset_date": "2026-04-03",
+    "tasks": [
+        {
+            "id": 1,
+            "name": "Morning Water",
+            "done": true,
+            "requires_proof": true,
+            "target_time": "04:55",
+            "note": "Drink at least 400-500ml before jog.",
+            "proof_path": "glowup_vault\\day_01\\task_1_morningwater_20260403_075041.jpg",
+            "completed_at": "2026-04-03 07:50:44"
+        },
+        {
+            "id": 2,
+            "name": "30-Min Morning Jog/Walk",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "05:00",
+            "note": "Outdoor cardio approved. 5AM workable (Sunny, rain 0%). Outdoor walk approved.",
+            "proof_path": "",
+            "completed_at": ""
+        },
+        {
+            "id": 3,
+            "name": "GlutaGenC (Pre-Breakfast)",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "06:00",
+            "note": "Take before breakfast, then wait 30-60 minutes.",
+            "proof_path": "",
+            "completed_at": ""
+        },
+        {
+            "id": 4,
+            "name": "Small Breakfast",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "06:45",
+            "note": "Low-rice breakfast. Keep it controlled and light.",
+            "proof_path": "",
+            "completed_at": ""
+        },
+        {
+            "id": 5,
+            "name": "Probiotic Supplement",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "07:05",
+            "note": "Take shortly after breakfast.",
+            "proof_path": "",
+            "completed_at": ""
+        },
+        {
+            "id": 6,
+            "name": "Afternoon Abs/Fat-Loss Workout",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "16:15",
+            "note": "Plank Hold: 35s | Dead Bug: 16 reps | Mountain Climbers: 24 reps",
+            "proof_path": "",
+            "completed_at": ""
+        },
+        {
+            "id": 7,
+            "name": "GlutaGenC (Bedtime)",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "20:30",
+            "note": "Take before final wind-down.",
+            "proof_path": "",
+            "completed_at": ""
+        },
+        {
+            "id": 8,
+            "name": "Skin Care Routine",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "20:40",
+            "note": "Night routine before sleep lock starts.",
+            "proof_path": "",
+            "completed_at": ""
+        },
+        {
+            "id": 9,
+            "name": "Sleep Reminder / Lockout",
+            "done": false,
+            "requires_proof": true,
+            "target_time": "21:00",
+            "note": "Sleep window enforced until 05:00.",
+            "proof_path": "",
+            "completed_at": ""
+        }
+    ],
+    "settings": {
+        "sleep_lock_start": "21:00",
+        "sleep_lock_end": "05:00",
+        "reminders_enabled": true,
+        "sound_enabled": true,
+        "strict_guard": true,
+        "weather_city": "Manila"
+    },
+    "weather": {
+        "status": "ok",
+        "good_for_walk": true,
+        "summary": "5AM workable (Sunny, rain 0%). Outdoor walk approved.",
+        "checked_at": "2026-04-03 07:49"
+    }
+}
