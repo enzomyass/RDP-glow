@@ -27,7 +27,7 @@ jobs:
           path: |
             ~/.buildozer
             ~/.gradle
-          key: ${{ runner.os }}-buildozer-${{ hashFiles('android/buildozer.spec') }}
+          key: ${{ runner.os }}-buildozer-v2-${{ hashFiles('android/buildozer.spec') }}
           restore-keys: |
             ${{ runner.os }}-buildozer-
 
@@ -48,7 +48,7 @@ jobs:
       - name: Build debug APK
         working-directory: android
         run: |
-          buildozer android debug
+          yes | buildozer -v android debug
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
