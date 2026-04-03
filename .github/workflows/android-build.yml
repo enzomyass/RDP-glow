@@ -30,3 +30,12 @@ jobs:
           name: rdp-glow-apk
           path: ${{ steps.buildozer.outputs.filename }}
           if-no-files-found: error
+
+          - name: Build APK with Buildozer
+        id: buildozer
+    uses: ArtemSBulgakov/buildozer-action@v1
+    env:
+      USER: root
+    with:
+      workdir: android
+      buildozer_version: stable
