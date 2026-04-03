@@ -7,7 +7,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,json,txt
 version = 0.1
 
-requirements = python3,kivy,plyer
+requirements = python3,kivy==2.2.1,plyer
 
 orientation = portrait
 fullscreen = 0
@@ -17,6 +17,7 @@ android.api = 33
 android.minapi = 24
 android.ndk = 25b
 android.accept_sdk_license = True
+android.archs = arm64-v8a
 
 [buildozer]
 log_level = 2
