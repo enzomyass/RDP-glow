@@ -19,7 +19,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.10"
 
       - name: Cache Buildozer + Gradle
         uses: actions/cache@v4
@@ -35,22 +35,34 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y \
+            build-essential ccache \
             git zip unzip openjdk-17-jdk \
             autoconf automake libtool pkg-config \
             zlib1g-dev libncurses5-dev libncursesw5-dev \
-            libtinfo6 cmake libffi-dev libssl-dev
+            libtinfo6 cmake libffi-dev libssl-dev \
+            libsqlite3-dev libbz2-dev liblzma-dev
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install buildozer cython
+          python -m pip install "Cython<3" buildozer==1.5.0
 
       - name: Build debug APK
         working-directory: android
         run: |
-          yes | buildozer -v android debug
+          set -o pipefail
+          yes | buildozer -v android debug 2>&1 | tee buildozer.log
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rdp-glow-build-log
+          path: android/buildozer.log
+          if-no-files-found: ignore
 
       - name: Upload APK artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: rdp-glow-apk
